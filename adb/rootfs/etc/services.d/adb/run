@@ -1,0 +1,18 @@
+#!/usr/bin/with-contenv bash
+# ==============================================================================
+# Community Hass.io Add-ons: Android Debug Bridge
+# Runs the Android Debug Bridge server
+# ==============================================================================
+# shellcheck disable=SC1091
+source /usr/lib/hassio-addons/base.sh
+
+declare -a options
+
+hass.log.info 'Starting the Android Debug Bridge server...'
+
+options+=(-a)
+options+=(server)
+options+=(nodaemon)
+
+# Run ADB
+exec adb "${options[@]}"
