@@ -1,0 +1,14 @@
+---
+include: https://raw.githubusercontent.com/hassio-addons/organization/master/gitlabci/addon.yml
+
+variables:
+  ADDON_GITHUB_REPO: "hassio-addons/addon-adb"
+  ADDON_SLUG: "adb"
+  ADDON_TARGET: "adb"
+
+  ADDON_ARMV7: "false"
+
+  ADDON_AARCH64_BASE: "hassioaddons/ubuntu-base-aarch64:2.2.1"
+  ADDON_AMD64_BASE: "hassioaddons/ubuntu-base-amd64:2.2.1"
+  ADDON_ARMHF_BASE: "hassioaddons/ubuntu-base-armhf:2.2.1"
+  ADDON_I386_BASE: "hassioaddons/ubuntu-base-i386:2.2.1"
