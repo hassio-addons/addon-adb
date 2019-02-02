@@ -63,8 +63,7 @@ Example add-on configuration:
     "192.168.1.100"
   ],
   "reconnect_timeout": 90,
-  "private_key": "/config/adbkey",
-  "public_key": "/config/adbkey.pub"
+  "keys_path": "/config/.androidkeys"
 }
 ```
 

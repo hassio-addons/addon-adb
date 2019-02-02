@@ -28,8 +28,7 @@
   },
   "schema": {
     "log_level": "match(^(trace|debug|info|notice|warning|error|fatal)$)?",
-    "private_key": "str?",
-    "public_key": "str?",
+    "keys_path": "str?",
     "devices": ["str"],
     "reconnect_timeout": "int"
   },

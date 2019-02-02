@@ -1,14 +1,18 @@
 #!/usr/bin/with-contenv bash
 # ==============================================================================
 # Community Hass.io Add-ons: Android Debug Bridge
-# Generates an RSA private/public keypair in case is does not exists yet
+# This files check if all user configuration requirements are met
 # ==============================================================================
 # shellcheck disable=SC1091
 source /usr/lib/hassio-addons/base.sh
 
-if ! hass.config.has_value 'private_key' \
-    && ! hass.file_exists "/data/adbkey";
-then
-    ssh-keygen -t rsa -b 2048 -f /data/adbkey -N '' \
-        || hass.die "Failed genering a private/public keypair"
+declare path
+
+path="/data"
+
+# If the user specified a custom keys path, use that.
+if hass.config.has_value 'keys_path'; then
+    path="$(hass.config.get 'keys_path')"
 fi
+
+ln -sf "${path}" /root/.android

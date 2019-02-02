@@ -6,29 +6,10 @@
 # shellcheck disable=SC1091
 source /usr/lib/hassio-addons/base.sh
 
-if hass.config.has_value 'private_key' \
-        && ! hass.config.has_value 'public_key';
+if hass.config.has_value 'keys_path' \
+        && ! hass.directory_exists "$(hass.config.get 'keys_path')";
 then
-    hass.die "Private key was provided, but no public key!"
-fi
-
-if hass.config.has_value 'public_key' \
-        && ! hass.config.has_value 'private_key';
-then
-    hass.die "Public key was provided, but no private key!"
-fi
-
-if hass.config.has_value 'public_key' \
-        && hass.config.has_value 'private_key';
-then
-
-    if ! hass.file_exists "/ssl/$(hass.config.get 'private_key')"; then
-            hass.die 'The specified private key could not be found'
-    fi
-
-    if ! hass.file_exists "/ssl/$(hass.config.get 'public_key')"; then
-            hass.die 'The specified private key could not be found'
-    fi
+        hass.die 'The specified keys path could not be found'
 fi
 
 if ! hass.config.has_value 'devices'; then

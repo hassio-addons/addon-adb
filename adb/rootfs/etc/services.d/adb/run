@@ -10,6 +10,7 @@ declare -a options
 
 hass.log.info 'Starting the Android Debug Bridge server...'
 
+# Start options for ADB
 options+=(-a)
 options+=(server)
 options+=(nodaemon)

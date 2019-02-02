@@ -12,7 +12,6 @@ RUN \
     \
     && apt-get install -y --no-install-recommends \
         adb=1:7.0.0+r33-2 \
-        openssh-client=1:7.6p1-4ubuntu0.1 \
     \
     && rm -fr \
         /tmp/* \
