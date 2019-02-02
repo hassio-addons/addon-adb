@@ -15,8 +15,8 @@
     "i386"
   ],
   "map": [
-    "config",
-    "share",
+    "config:rw",
+    "share:rw",
     "ssl:rw"
   ],
   "boot": "auto",
