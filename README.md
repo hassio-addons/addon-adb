@@ -30,7 +30,8 @@ comparison to installing any other Hass.io add-on.
 
 1. [Add our Hass.io add-ons repository][repository] to your Hass.io instance.
 1. Install the "ADB - Android Debug Bridge" add-on.
-1. Ensure your Android device has developer mode and network debugging enabled.
+1. Ensure that your Android device has [developer mode and network debugging](#enabling-developer-mode-on-your-device)
+   enabled.
 1. Add the IP addresses of your device(s) to the add-on configuration.
 1. Start the "ADB - Android Debug Bridge" add-on.
 1. Check the logs of the add-on to see if everything went well.
@@ -53,7 +54,7 @@ comparison to installing any other Hass.io add-on.
 
 **Note**: _Remember to restart the add-on when the configuration is changed._
 
-Example add-on configuration:
+Example add-on configuration, with all available options:
 
 ```json
 {
@@ -68,6 +69,19 @@ Example add-on configuration:
 ```
 
 **Note**: _This is just an example, don't copy and paste it! Create your own!_
+
+### Option: `devices`
+
+Allows you to provide a list of IP addresses (or hostnames) of devices to
+which the ADB server program connects.
+
+### Option: `reconnect_timeout`
+
+The add-on will try to (re)connect to the listed devices after this timeout
+has passed. In case one of your devices goes offline and comes back online again
+the add-on will connect to it within this time setting.
+
+The default is 90 seconds.
 
 ### Option: `log_level`
 
@@ -86,6 +100,90 @@ Please note that each level automatically includes log messages from a
 more severe level, e.g., `debug` also shows `info` messages. By default,
 the `log_level` is set to `info`, which is the recommended setting unless
 you are troubleshooting.
+
+### Option: `keys_path`
+
+Allows you to provide a custom path to where the private/public key pair is
+stored. This option is not listed by default and completely optional.
+If you omit this option, the add-on will generate
+and store a key pair for you internally.
+
+If the provided directory is empty, the add-on will create
+a new (fresh) key pair in the specified location.
+You can also provide your own key pair, which **must** be named
+ `adbkey` and `adbkey.pub` (and stored in the specified location).
+
+The `keys_path` path must be in either `/ssl`, `/config` or `/share`, subfolders
+are allowed (e.g., `/config/adb/mykeys`).
+
+## Enabling developer mode on your device
+
+Your device must be running in developer & debugging mode, to allow this
+add-on to connect. To do this, follow these steps on your Android TV device:
+
+1. Press Home and go into Settings.
+1. Select and press "About" from the Settings menu.
+1. Scroll down to the "Build" information.
+1. Select and click on "Build" several times (6-10 times).
+1. A dialog appears, saying: "You are now a developer".
+1. Press Home and go into Settings again.
+1. Select and press "System Preferences" from the Settings menu.
+1. Select and press "Developer options".
+1. Scroll down to "Debugging".
+1. Turn on "Network debugging".
+1. Done!
+
+Not all devices have the same procedure, so for your device, it might
+differ a bit. A quick search on Google would probably lead you towards
+a specific solution for your device.
+
+## Integrating into Home Assistant
+
+This ADB add-on can be used with all Android-based devices, and we expect
+multiple integrations for this to appear in Home Assistant itself.
+
+Integration for the Android TV (Sony, NVidia Shield, Xiaomi Mi Box) media
+player component, is currently under review by the Home Assistant team
+and is expected to be part of the Home Assistant core soon.
+
+Nevertheless, you can already use this component by installing it as a custom
+component in your setup. This addon provide you a custom component that
+was tested for use with this add-on: [`custom_components/media_player/androidtv.py`](/custom_components/media_player/androidtv.py)
+
+Download that file from this GitHub repository and store the file inside your
+Home Assistant configuration folder. In case of Hass.io, store it in:
+`/config/custom_components/media_player/androidtv.py`. Restart Home Assistant
+so it can pick up this component.
+
+**Note**: This is a development version of the Android TV component, and might
+contain issues.
+
+When the custom component is added to your Home Assistant setup, you
+can use it like so:
+
+```yaml
+# Example configuration.yaml entry
+# Based on adding my NVidia Shield, which has IP 192.168.1.34.
+media_player:
+  - platform: androidtv
+    host: 192.168.1.34
+    name: "NVidia Shield"
+    adb_server_ip: a0d7b954-adb
+    adb_server_port: 5037
+```
+
+**Note**: Please note, `a0d7b954-adb` is correct and is actually an internal
+add-on hostname reference for Hass.io.
+
+## Useful tips and tricks
+
+- There is a Chrome Extention/App called "ADB Chrome", which can connect
+  to this add-on and actually sideload apps as well!
+- Using the `androidtv` component, you can send intents via a service call:
+  - Send `netflix://` as an intent, to start Netflix on your Android TV.
+  - Send `twitch://stream/frenck` as an intent,
+    to start streaming my stream on Twitch.
+  - Send any YouTube URL as an intent, to start streaming a video on YouTube.
 
 ## Known issues and limitations
 
