@@ -118,8 +118,10 @@ are allowed (e.g., `/config/adb/mykeys`).
 
 ## Enabling developer mode on your device
 
-Your device must be running in developer & debugging mode, to allow this
-add-on to connect. To do this, follow these steps on your Android TV device:
+Your device must be running in developer & network debugging mode,
+to allow this add-on to connect.
+
+To do this, follow these steps on your Android TV device:
 
 1. Press Home and go into Settings.
 1. Select and press "About" from the Settings menu.
