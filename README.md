@@ -279,7 +279,7 @@ SOFTWARE.
 [discord]: https://discord.me/hassioaddons
 [dockerhub]: https://hub.docker.com/r/hassioaddons/adb
 [forum-shield]: https://img.shields.io/badge/community-forum-brightgreen.svg
-[forum]: https://community.home-assistant.io/?u=frenck
+[forum]: https://community.home-assistant.io/t/community-hass-io-add-on-adb-android-debug-bridge/96375?u=frenck
 [frenck]: https://github.com/frenck
 [gitlabci-shield]: https://gitlab.com/hassio-addons/addon-adb/badges/master/pipeline.svg
 [gitlabci]: https://gitlab.com/hassio-addons/addon-adb/pipelines
