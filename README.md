@@ -170,12 +170,9 @@ media_player:
   - platform: androidtv
     host: 192.168.1.34
     name: "NVidia Shield"
-    adb_server_ip: a0d7b954-adb
+    adb_server_ip: 127.0.0.1
     adb_server_port: 5037
 ```
-
-**Note**: Please note, `a0d7b954-adb` is correct and is actually an internal
-add-on hostname reference for Hass.io.
 
 ## Useful tips and tricks
 
