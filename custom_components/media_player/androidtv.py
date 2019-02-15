@@ -145,12 +145,18 @@ PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend({
 })
 
 ACTION_SERVICE = 'androidtv_action'
+COMMAND_SERVICE = 'androidtv_command'
 INTENT_SERVICE = 'androidtv_intent'
 KEY_SERVICE = 'androidtv_key'
 
 SERVICE_ACTION_SCHEMA = vol.Schema({
     vol.Required(ATTR_ENTITY_ID): cv.entity_ids,
     vol.Required('action'): vol.In(ACTIONS),
+})
+
+SERVICE_COMMAND_SCHEMA = vol.Schema({
+    vol.Required(ATTR_ENTITY_ID): cv.entity_ids,
+    vol.Required('command'): cv.string,
 })
 
 SERVICE_INTENT_SCHEMA = vol.Schema({
@@ -222,6 +228,18 @@ def setup_platform(hass, config, add_entities, discovery_info=None):
         for target_device in target_devices:
             target_device.do_action(params['action'])
 
+    def service_command(service):
+        """Dispatch service calls to target entities."""
+        params = {key: value for key, value in service.data.items()
+                  if key != ATTR_ENTITY_ID}
+
+        entity_id = service.data.get(ATTR_ENTITY_ID)
+        target_devices = [dev for dev in hass.data[DATA_KEY].values()
+                          if dev.entity_id in entity_id]
+
+        for target_device in target_devices:
+            target_device.run_command(params['command'])
+
     def service_intent(service):
         """Dispatch service calls to target entities."""
         params = {key: value for key, value in service.data.items()
@@ -248,6 +266,8 @@ def setup_platform(hass, config, add_entities, discovery_info=None):
 
     hass.services.register(
         DOMAIN, ACTION_SERVICE, service_action, schema=SERVICE_ACTION_SCHEMA)
+    hass.services.register(
+        DOMAIN, COMMAND_SERVICE, service_command, schema=SERVICE_COMMAND_SCHEMA)
     hass.services.register(
         DOMAIN, INTENT_SERVICE, service_intent, schema=SERVICE_INTENT_SCHEMA)
     hass.services.register(
@@ -496,3 +516,8 @@ class AndroidTVDevice(MediaPlayerDevice):
     def do_action(self, action):
         """Input the key corresponding to the action."""
         self.androidtv.do_action(action)
+
+    @adb_decorator()
+    def run_command(self, command):
+        """Run a command on the device."""
+        self.androidtv.adb_shell(command)
