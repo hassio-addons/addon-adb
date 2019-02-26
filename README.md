@@ -150,11 +150,11 @@ and is expected to be part of the Home Assistant core soon.
 
 Nevertheless, you can already use this component by installing it as a custom
 component in your setup. This addon provide you a custom component that
-was tested for use with this add-on: [`custom_components/media_player/androidtv.py`](/custom_components/media_player/androidtv.py)
+was tested for use with this add-on: [`custom_components/androidtv/media_player.py`](/custom_components/androidtv/media_player.py)
 
 Download that file from this GitHub repository and store the file inside your
 Home Assistant configuration folder. In case of Hass.io, store it in:
-`/config/custom_components/media_player/androidtv.py`. Restart Home Assistant
+`/config/custom_components/androidtv/media_player.py`. Restart Home Assistant
 so it can pick up this component.
 
 **Note**: This is a development version of the Android TV component, and might
