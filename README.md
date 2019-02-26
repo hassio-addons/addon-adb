@@ -184,7 +184,8 @@ media_player:
   - Send `twitch://stream/frenck` as an intent,
     to start streaming my stream on Twitch.
   - Send any YouTube URL as an intent, to start streaming a video on YouTube.
-- [@McFrojd's Gist](https://gist.github.com/mcfrojd/9e6875e1db5c089b1e3ddeb7dba0f304) with useful intents and lovelace example for a Nvidia Shield Remote.
+- [@McFrojd's Gist](https://gist.github.com/mcfrojd/9e6875e1db5c089b1e3ddeb7dba0f304)
+  with useful intents and lovelace example for a Nvidia Shield Remote.
 
 ## Known issues and limitations
 
