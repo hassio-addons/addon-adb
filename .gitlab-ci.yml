@@ -5,6 +5,7 @@ variables:
   ADDON_GITHUB_REPO: "hassio-addons/addon-adb"
   ADDON_SLUG: "adb"
   ADDON_TARGET: "adb"
+  ADDON_LEGACY_TAGS: "true"
 
   ADDON_ARMHF: "false"
 
