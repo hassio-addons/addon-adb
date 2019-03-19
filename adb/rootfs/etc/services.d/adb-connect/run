@@ -1,11 +1,8 @@
-#!/usr/bin/with-contenv bash
+#!/usr/bin/with-contenv bashio
 # ==============================================================================
 # Community Hass.io Add-ons: Android Debug Bridge
 # Trys to connect devices to the Android Debug Bridge
 # ==============================================================================
-# shellcheck disable=SC1091
-source /usr/lib/hassio-addons/base.sh
-
 declare path
 
 # Wait for ADB to become available
@@ -13,22 +10,22 @@ s6-svwait -u -t 5000 /var/run/s6/services/adb
 
 path="/data"
 # If the user specified a custom keys path, use that.
-if hass.config.has_value 'keys_path'; then
-    path="$(hass.config.get 'keys_path')"
+if bashio::config.has_value 'keys_path'; then
+    path="$(bashio::config 'keys_path')"
 fi
 
 # If the key does not exists yet, it probably is still generating
-if ! hass.file_exists "${path}/adbkey"; then
+if ! bashio::fs.file_exists "${path}/adbkey"; then
     sleep 10
 fi
 
 # Try to (re)connect to all devices
-if hass.config.has_value 'devices'; then
+if bashio::config.has_value 'devices'; then
     while read -r device; do
-        hass.log.info "Connecting to device: ${device}..."
+        bashio::log.info "Connecting to device: ${device}..."
         adb connect "${device}"
-    done <<< "$(hass.config.get 'devices')"
+    done <<< "$(bashio::config 'devices')"
 fi
 
 # Sleep until next loop
-exec sleep "$(hass.config.get 'reconnect_timeout')"
+exec sleep "$(bashio::config 'reconnect_timeout')"

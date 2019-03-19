@@ -1,18 +1,28 @@
-#!/usr/bin/with-contenv bash
+#!/usr/bin/with-contenv bashio
 # ==============================================================================
 # Community Hass.io Add-ons: Android Debug Bridge
 # This files check if all user configuration requirements are met
 # ==============================================================================
-# shellcheck disable=SC1091
-source /usr/lib/hassio-addons/base.sh
-
-if hass.config.has_value 'keys_path' \
-        && ! hass.directory_exists "$(hass.config.get 'keys_path')";
+if bashio::config.has_value 'keys_path' \
+        && ! bashio::fs.directory_exists "$(bashio::config 'keys_path')";
 then
-        hass.die 'The specified keys path could not be found'
+    bashio::log.fatal
+    bashio::log.fatal 'It seems like you have configured the "keys_path"'
+    bashio::log.fatal 'option, unfortunately, the path specified could'
+    bashio::log.fatal 'not be found.'
+    bashio::log.fatal
+    bashio::log.fatal 'Please double check the add-on configuration.'
+    bashio::log.fatal
+    bashio::exit.nok
 fi
 
-if ! hass.config.has_value 'devices'; then
-    hass.log.warning "No devices are specified!"
-    hass.log.warning "The add-on might not work as expected."
+if ! bashio::config.has_value 'devices'; then
+    bashio::log.warning
+    bashio::log.warning 'No devices are specified!'
+    bashio::log.warning
+    bashio::log.warning 'The ADB add-on connects to Android device, but you'
+    bashio::log.warning 'have left the "devices" add-on option empty.'
+    bashio::log.warning
+    bashio::log.warning 'The add-on might not work as expected.'
+    bashio::log.warning
 fi
