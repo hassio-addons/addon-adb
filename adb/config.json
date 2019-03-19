@@ -31,8 +31,5 @@
     "keys_path": "str?",
     "devices": ["str"],
     "reconnect_timeout": "int"
-  },
-  "environment": {
-    "LOG_FORMAT": "{LEVEL}: {MESSAGE}"
   }
 }
