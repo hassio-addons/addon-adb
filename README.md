@@ -137,28 +137,10 @@ a specific solution for your device.
 
 ## Integrating into Home Assistant
 
-This ADB add-on can be used with all Android-based devices, and we expect
-multiple integrations for this to appear in Home Assistant itself.
+This ADB add-on can be used with all Android-based devices, using the
+[`androidtv`][androidtv] component.
 
-Integration for the Android TV (Sony, NVidia Shield, Xiaomi Mi Box) media
-player component, is currently under review by the Home Assistant team
-and is expected to be part of the Home Assistant core soon.
-
-Nevertheless, you can already use this component by installing it as a custom
-component in your setup. This addon provide you a custom component that
-was tested for use with this add-on:
-[`custom_components/androidtv/`](/custom_components/androidtv/)
-
-Download the files in that folder from this GitHub repository and store them
-in your Home Assistant configuration folder. In case of Hass.io,
-store them in: `/config/custom_components/androidtv/`. Restart Home Assistant
-so it can pick up this component.
-
-**Note**: This is a development version of the Android TV component, and might
-contain issues.
-
-When the custom component is added to your Home Assistant setup, you
-can use it like so:
+This is an example using an NVidia Shield with the ADB add-on:
 
 ```yaml
 # Example configuration.yaml entry
@@ -265,6 +247,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
+[androidtv]: https://www.home-assistant.io/components/androidtv/
 [aarch64-shield]: https://img.shields.io/badge/aarch64-yes-green.svg
 [amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
 [armhf-shield]: https://img.shields.io/badge/armhf-no-red.svg
