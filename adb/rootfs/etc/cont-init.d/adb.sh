@@ -1,8 +1,10 @@
 #!/usr/bin/with-contenv bashio
 # ==============================================================================
 # Community Hass.io Add-ons: Android Debug Bridge
-# This files check if all user configuration requirements are met
+# Configures ADB
 # ==============================================================================
+declare path
+
 if bashio::config.has_value 'keys_path' \
         && ! bashio::fs.directory_exists "$(bashio::config 'keys_path')";
 then
@@ -26,3 +28,13 @@ if ! bashio::config.has_value 'devices'; then
     bashio::log.warning 'The add-on might not work as expected.'
     bashio::log.warning
 fi
+
+# Default storage keys path storage location
+path="/data"
+
+# If the user specified a custom keys path, use that.
+if bashio::config.has_value 'keys_path'; then
+    path="$(bashio::config 'keys_path')"
+fi
+
+ln -sf "${path}" /root/.android
