@@ -8,6 +8,9 @@
   "ports": {
     "5037/tcp": 5037
   },
+  "ports_description": {
+    "5037/tcp": "ADB Server"
+  },
   "arch": [
     "aarch64",
     "amd64",
