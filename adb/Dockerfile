@@ -11,7 +11,7 @@ RUN \
     apt-get update \
     \
     && apt-get install -y --no-install-recommends \
-        adb=1:7.0.0+r33-2 \
+        adb=1:8.1.0+r23-5~18.04 \
     \
     && rm -fr \
         /tmp/* \
