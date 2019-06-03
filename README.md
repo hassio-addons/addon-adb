@@ -157,12 +157,9 @@ media_player:
 
 - There is a Chrome Extention/App called "ADB Chrome", which can connect
   to this add-on and actually sideload apps as well!
-- Using the `androidtv` component, you can send intents via a service call:
-  - Send `netflix://` as an intent, to start Netflix on your Android TV.
-  - Send `twitch://stream/frenck` as an intent,
-    to start streaming my stream on Twitch.
-  - Send any YouTube URL as an intent, to start streaming a video on YouTube.
-- [@McFrojd's Gist](https://gist.github.com/mcfrojd/9e6875e1db5c089b1e3ddeb7dba0f304)
+- Using the `androidtv` component, you can send intents via the `androidtv.adb_command` service.
+  - For more information, see the [Android TV documentation](https://www.home-assistant.io/components/androidtv#androidtvadb_command).
+  - For examples, see [@McFrojd's Gist](https://gist.github.com/mcfrojd/9e6875e1db5c089b1e3ddeb7dba0f304)
   with useful intents and lovelace example for a Nvidia Shield Remote.
 
 ## Known issues and limitations
