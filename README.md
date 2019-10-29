@@ -138,7 +138,7 @@ a specific solution for your device.
 ## Integrating into Home Assistant
 
 This ADB add-on can be used with all Android-based devices, using the
-[`androidtv`][androidtv] component.
+[`androidtv`][androidtv] integration.
 
 This is an example using an NVidia Shield with the ADB add-on:
 
@@ -157,7 +157,7 @@ media_player:
 
 - There is a Chrome Extention/App called "ADB Chrome", which can connect
   to this add-on and actually sideload apps as well!
-- Using the `androidtv` component, you can send intents via
+- Using the `androidtv` integration, you can send intents via
   the `androidtv.adb_command` service.
 - For more information, see the [Android TV documentation][androidtv-docs].
 - For examples, see [@McFrojd's Gist][mcfrojd] with useful intents and
@@ -245,7 +245,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-[androidtv]: https://www.home-assistant.io/components/androidtv/
+[androidtv]: https://www.home-assistant.io/integrations/androidtv/
 [aarch64-shield]: https://img.shields.io/badge/aarch64-yes-green.svg
 [amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
 [armhf-shield]: https://img.shields.io/badge/armhf-no-red.svg
@@ -279,5 +279,5 @@ SOFTWARE.
 [releases]: https://github.com/hassio-addons/addon-adb/releases
 [repository]: https://github.com/hassio-addons/repository
 [semver]: http://semver.org/spec/v2.0.0.htm
-[androidtv-docs]: https://www.home-assistant.io/components/androidtv#androidtvadb_command
+[androidtv-docs]: https://www.home-assistant.io/integrations/androidtv#androidtvadb_command
 [mcfrojd]: https://gist.github.com/mcfrojd/9e6875e1db5c089b1e3ddeb7dba0f304
