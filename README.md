@@ -34,17 +34,15 @@ used to get full local control over your Android (TV) devices.
 The installation of this add-on is pretty straightforward and not different in
 comparison to installing any other Hass.io add-on.
 
-1. [Add our Hass.io add-ons repository][repository] to your Hass.io instance.
-1. Install the "ADB - Android Debug Bridge" add-on.
-1. Ensure that your Android device has [developer mode and network debugging](#enabling-developer-mode-on-your-device)
+1. Search for the "ADB - Android Debug Bridge" add-on
+   in the Hass.io add-on store.
+2. Install the "ADB - Android Debug Bridge" add-on.
+3. Ensure that your Android device has [developer mode and network debugging](#enabling-developer-mode-on-your-device)
    enabled.
-1. Add the IP addresses of your device(s) to the add-on configuration.
-1. Start the "ADB - Android Debug Bridge" add-on.
-1. Check the logs of the add-on to see if everything went well.
-1. Ready to go!
-
-**NOTE**: Do not add this repository to Hass.io, please use:
-`https://github.com/hassio-addons/repository`.
+4. Add the IP addresses of your device(s) to the add-on configuration.
+5. Start the "ADB - Android Debug Bridge" add-on.
+6. Check the logs of the add-on to see if everything went well.
+7. Ready to go!
 
 ## Configuration
 
@@ -120,16 +118,16 @@ to allow this add-on to connect.
 To do this, follow these steps on your Android TV device:
 
 1. Press Home and go into Settings.
-1. Select and press "About" from the Settings menu.
-1. Scroll down to the "Build" information.
-1. Select and click on "Build" several times (6-10 times).
-1. A dialog appears, saying: "You are now a developer".
-1. Press Home and go into Settings again.
-1. Select and press "System Preferences" from the Settings menu.
-1. Select and press "Developer options".
+2. Select and press "About" from the Settings menu.
+3. Scroll down to the "Build" information.
+4. Select and click on "Build" several times (6-10 times).
+5. A dialog appears, saying: "You are now a developer".
+6. Press Home and go into Settings again.
+7. Select and press "System Preferences" from the Settings menu.
+8. Select and press "Developer options".
 1. Scroll down to "Debugging".
-1. Turn on "Network debugging".
-1. Done!
+2. Turn on "Network debugging".
+3. Done!
 
 Not all devices have the same procedure, so for your device, it might
 differ a bit. A quick search on Google would probably lead you towards
