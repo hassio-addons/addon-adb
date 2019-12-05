@@ -117,16 +117,16 @@ to allow this add-on to connect.
 To do this, follow these steps on your Android TV device:
 
 1. Press Home and go into Settings.
-2. Select and press "About" from the Settings menu.
-3. Scroll down to the "Build" information.
-4. Select and click on "Build" several times (6-10 times).
-5. A dialog appears, saying: "You are now a developer".
-6. Press Home and go into Settings again.
-7. Select and press "System Preferences" from the Settings menu.
-8. Select and press "Developer options".
+1. Select and press "About" from the Settings menu.
+1. Scroll down to the "Build" information.
+1. Select and click on "Build" several times (6-10 times).
+1. A dialog appears, saying: "You are now a developer".
+1. Press Home and go into Settings again.
+1. Select and press "System Preferences" from the Settings menu.
+1. Select and press "Developer options".
 1. Scroll down to "Debugging".
-2. Turn on "Network debugging".
-3. Done!
+1. Turn on "Network debugging".
+1 Done!
 
 Not all devices have the same procedure, so for your device, it might
 differ a bit. A quick search on Google would probably lead you towards
