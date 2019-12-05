@@ -35,14 +35,13 @@ The installation of this add-on is pretty straightforward and not different in
 comparison to installing any other Hass.io add-on.
 
 1. Search for the "ADB - Android Debug Bridge" add-on
-   in the Hass.io add-on store.
-2. Install the "ADB - Android Debug Bridge" add-on.
-3. Ensure that your Android device has [developer mode and network debugging](#enabling-developer-mode-on-your-device)
+   in the Hass.io add-on store and install it.
+1. Ensure that your Android device has [developer mode and network debugging](#enabling-developer-mode-on-your-device)
    enabled.
-4. Add the IP addresses of your device(s) to the add-on configuration.
-5. Start the "ADB - Android Debug Bridge" add-on.
-6. Check the logs of the add-on to see if everything went well.
-7. Ready to go!
+1. Add the IP addresses of your device(s) to the add-on configuration.
+1. Start the "ADB - Android Debug Bridge" add-on.
+1. Check the logs of the add-on to see if everything went well.
+1. Ready to go!
 
 ## Configuration
 
