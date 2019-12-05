@@ -126,7 +126,7 @@ To do this, follow these steps on your Android TV device:
 1. Select and press "Developer options".
 1. Scroll down to "Debugging".
 1. Turn on "Network debugging".
-1 Done!
+1. Done!
 
 Not all devices have the same procedure, so for your device, it might
 differ a bit. A quick search on Google would probably lead you towards
