@@ -17,9 +17,9 @@
 [![Discord][discord-shield]][discord]
 [![Community Forum][forum-shield]][forum]
 
-[![Buy me a coffee][buymeacoffee-shield]][buymeacoffee]
+[![Sponsor Frenck via GitHub Sponsors][github-sponsors-shield]][github-sponsors]
 
-[![Support my work on Patreon][patreon-shield]][patreon]
+[![Support Frenck on Patreon][patreon-shield]][patreon]
 
 The Android Debug Bridge server program.
 
@@ -242,13 +242,12 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-[androidtv]: https://www.home-assistant.io/integrations/androidtv/
 [aarch64-shield]: https://img.shields.io/badge/aarch64-yes-green.svg
 [amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
+[androidtv-docs]: https://www.home-assistant.io/integrations/androidtv#androidtvadb_command
+[androidtv]: https://www.home-assistant.io/integrations/androidtv/
 [armhf-shield]: https://img.shields.io/badge/armhf-no-red.svg
 [armv7-shield]: https://img.shields.io/badge/armv7-yes-green.svg
-[buymeacoffee-shield]: https://www.buymeacoffee.com/assets/img/guidelines/download-assets-sm-2.svg
-[buymeacoffee]: https://www.buymeacoffee.com/frenck
 [commits-shield]: https://img.shields.io/github/commit-activity/y/hassio-addons/addon-adb.svg
 [commits]: https://github.com/hassio-addons/addon-adb/commits/master
 [contributors]: https://github.com/hassio-addons/addon-adb/graphs/contributors
@@ -259,6 +258,8 @@ SOFTWARE.
 [forum-shield]: https://img.shields.io/badge/community-forum-brightgreen.svg
 [forum]: https://community.home-assistant.io/t/community-hass-io-add-on-adb-android-debug-bridge/96375?u=frenck
 [frenck]: https://github.com/frenck
+[github-sponsors-shield]: https://frenck.dev/wp-content/uploads/2019/12/github_sponsor.png
+[github-sponsors]: https://github.com/sponsors/frenck
 [gitlabci-shield]: https://gitlab.com/hassio-addons/addon-adb/badges/master/pipeline.svg
 [gitlabci]: https://gitlab.com/hassio-addons/addon-adb/pipelines
 [home-assistant]: https://home-assistant.io
@@ -267,8 +268,9 @@ SOFTWARE.
 [keepchangelog]: http://keepachangelog.com/en/1.0.0/
 [license-shield]: https://img.shields.io/github/license/hassio-addons/addon-adb.svg
 [maintenance-shield]: https://img.shields.io/maintenance/yes/2020.svg
+[mcfrojd]: https://gist.github.com/mcfrojd/9e6875e1db5c089b1e3ddeb7dba0f304
 [microbadger]: https://microbadger.com/images/hassioaddons/adb
-[patreon-shield]: https://www.frenck.nl/images/patreon.png
+[patreon-shield]: https://frenck.dev/wp-content/uploads/2019/12/patreon.png
 [patreon]: https://www.patreon.com/frenck
 [project-stage-shield]: https://img.shields.io/badge/project%20stage-experimental-yellow.svg
 [reddit]: https://reddit.com/r/homeassistant
@@ -276,5 +278,3 @@ SOFTWARE.
 [releases]: https://github.com/hassio-addons/addon-adb/releases
 [repository]: https://github.com/hassio-addons/repository
 [semver]: http://semver.org/spec/v2.0.0.htm
-[androidtv-docs]: https://www.home-assistant.io/integrations/androidtv#androidtvadb_command
-[mcfrojd]: https://gist.github.com/mcfrojd/9e6875e1db5c089b1e3ddeb7dba0f304
