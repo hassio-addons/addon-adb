@@ -6,7 +6,7 @@
 declare path
 
 # Wait for ADB to become available
-s6-svwait -u -t 5000 /var/run/s6/services/adb
+bashio::net.wait_for 5037
 
 path="/data"
 # If the user specified a custom keys path, use that.
