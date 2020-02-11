@@ -1,6 +1,6 @@
 #!/usr/bin/with-contenv bashio
 # ==============================================================================
-# Community Hass.io Add-ons: Android Debug Bridge
+# Community Home Assistant Add-on: Android Debug Bridge
 # Trys to connect devices to the Android Debug Bridge
 # ==============================================================================
 declare path
