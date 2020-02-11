@@ -49,16 +49,13 @@ comparison to installing any other Hass.io add-on.
 
 Example add-on configuration, with all available options:
 
-```json
-{
-  "log_level": "info",
-  "devices": [
-    "192.168.1.123",
-    "192.168.1.100"
-  ],
-  "reconnect_timeout": 90,
-  "keys_path": "/config/.androidkeys"
-}
+```yaml
+log_level: info
+devices:
+  - 192.168.1.123
+  - 192.168.1.100
+reconnect_timeout: 90
+keys_path: "/config/.androidkeys"
 ```
 
 **Note**: _This is just an example, don't copy and paste it! Create your own!_
