@@ -1,6 +1,6 @@
 #!/usr/bin/with-contenv bashio
 # ==============================================================================
-# Community Home Assistant Add-on: Android Debug Bridge
+# Home Assistant Community Add-on: Android Debug Bridge
 # Runs the Android Debug Bridge server
 # ==============================================================================
 declare -a options

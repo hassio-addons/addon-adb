@@ -1,6 +1,6 @@
 #!/usr/bin/execlineb -S0
 # ==============================================================================
-# Community Home Assistant Add-on: Android Debug Bridge
+# Home Assistant Community Add-on: Android Debug Bridge
 # Take down the S6 supervision tree when adb fails
 # ==============================================================================
 if -n { s6-test $# -ne 0 }

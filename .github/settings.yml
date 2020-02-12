@@ -1,6 +1,6 @@
 ---
 repository:
-  description: "Android Debug Bridge - Community Home Assistant Add-ons"
+  description: "Android Debug Bridge - Home Assistant Community Add-ons"
   homepage: https://addons.community
   topics: android, adb, android-debug-bridge, addon, addons, home-assistant, homeassistant
   private: false
