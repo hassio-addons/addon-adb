@@ -12,6 +12,7 @@
     "5037/tcp": "ADB Server"
   },
   "arch": ["aarch64", "amd64", "armv7", "i386"],
+  "init": false,
   "map": ["config:rw", "share:rw", "ssl:rw"],
   "boot": "auto",
   "hassio_api": true,
