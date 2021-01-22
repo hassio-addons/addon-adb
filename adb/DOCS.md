@@ -140,8 +140,7 @@ media_player:
 ## Changelog & Releases
 
 This repository keeps a change log using [GitHub's releases][releases]
-functionality. The format of the log is based on
-[Keep a Changelog][keepchangelog].
+functionality.
 
 Releases are based on [Semantic Versioning][semver], and use the format
 of `MAJOR.MINOR.PATCH`. In a nutshell, the version will be incremented
@@ -205,7 +204,6 @@ SOFTWARE.
 [forum]: https://community.home-assistant.io/t/home-assistant-community-add-ons-adb-android-debug-bridge/96375?u=frenck
 [frenck]: https://github.com/frenck
 [issue]: https://github.com/hassio-addons/addon-adb/issues
-[keepchangelog]: http://keepachangelog.com/en/1.0.0/
 [mcfrojd]: https://gist.github.com/mcfrojd/9e6875e1db5c089b1e3ddeb7dba0f304
 [reddit]: https://reddit.com/r/homeassistant
 [semver]: http://semver.org/spec/v2.0.0.htm
