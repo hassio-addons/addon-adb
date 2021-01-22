@@ -58,7 +58,7 @@ dealing with an unknown issue. Possible values are:
 - `debug`: Shows detailed debug information.
 - `info`: Normal (usually) interesting events.
 - `warning`: Exceptional occurrences that are not errors.
-- `error`:  Runtime errors that do not require immediate action.
+- `error`: Runtime errors that do not require immediate action.
 - `fatal`: Something went terribly wrong. Add-on becomes unusable.
 
 Please note that each level automatically includes log messages from a
@@ -76,7 +76,7 @@ and store a key pair for you internally.
 If the provided directory is empty, the add-on will create
 a new (fresh) key pair in the specified location.
 You can also provide your own key pair, which **must** be named
- `adbkey` and `adbkey.pub` (and stored in the specified location).
+`adbkey` and `adbkey.pub` (and stored in the specified location).
 
 The `keys_path` path must be in either `/ssl`, `/config` or `/share`, subfolders
 are allowed (e.g., `/config/adb/mykeys`).
@@ -144,12 +144,12 @@ functionality. The format of the log is based on
 [Keep a Changelog][keepchangelog].
 
 Releases are based on [Semantic Versioning][semver], and use the format
-of ``MAJOR.MINOR.PATCH``. In a nutshell, the version will be incremented
+of `MAJOR.MINOR.PATCH`. In a nutshell, the version will be incremented
 based on the following:
 
-- ``MAJOR``: Incompatible or major changes.
-- ``MINOR``: Backwards-compatible new features and enhancements.
-- ``PATCH``: Backwards-compatible bugfixes and package updates.
+- `MAJOR`: Incompatible or major changes.
+- `MINOR`: Backwards-compatible new features and enhancements.
+- `PATCH`: Backwards-compatible bugfixes and package updates.
 
 ## Support
 
