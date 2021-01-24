@@ -14,7 +14,6 @@
   "arch": ["aarch64", "amd64", "armv7", "i386"],
   "init": false,
   "map": ["config:rw", "share:rw", "ssl:rw"],
-  "hassio_api": true,
   "options": {
     "devices": [],
     "reconnect_timeout": 90
