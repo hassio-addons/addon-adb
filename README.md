@@ -38,6 +38,8 @@ as the packages used are stalled.
 
 Therefore, this add-on is now deprecated.
 
+Information on the built-in Python implementation can be found here: https://www.home-assistant.io/integrations/androidtv/#1-python-adb-implementation
+
 ## About
 
 The Android Debug Bridge (ADB) is a client-server program used in Android
